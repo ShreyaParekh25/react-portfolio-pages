@@ -57,7 +57,7 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <Button className="btn-primary">Hire Me</Button>
+              {/* <Button className="btn-primary">Hire Me</Button> */}
               <Button className="btn-outline">Contact Me</Button>
             </div>
           </div>
