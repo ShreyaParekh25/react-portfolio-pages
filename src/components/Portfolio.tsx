@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
+import { prototype } from 'events';
 
 type Project = {
   id: number;
@@ -21,64 +22,75 @@ const Portfolio = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Diatech-SGI",
       category: "web",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80",
-      description: "A full-featured e-commerce platform with advanced product filtering, user authentication, and payment processing.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+      description: "It is a web-based software that has global client/user base, Offering features such as inventory tracking and management, Sales order management, Sales analysis & optimization tools, Client on-boarding, etc",
+      technologies: ["Angular","TypeScript,", "MySQL", "ASP.NET", ],
       githubUrl: "#",
       liveUrl: "#"
     },
-    {
+     {
       id: 2,
-      title: "Task Management App",
-      category: "mobile",
-      image: "https://images.unsplash.com/photo-1517702440633-dd56de71a1f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80",
-      description: "A cross-platform mobile application for task management with real-time updates and team collaboration features.",
-      technologies: ["React Native", "Firebase", "Redux", "Expo"],
+      title: "Inventory Manager",
+      category: "web",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      description: "To develop a robust backend system for managing inventory items, including product tracking, stock levels, suppliers, and orders.",
+      technologies: ["Angular", "SpringBoot REST", "In-memory H2 "],
       githubUrl: "#",
       liveUrl: "#"
     },
     {
       id: 3,
-      title: "Financial Dashboard",
-      category: "web",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      description: "An interactive dashboard for financial data visualization with real-time market updates and portfolio tracking.",
-      technologies: ["Next.js", "D3.js", "TypeScript", "Tailwind CSS", "API Integration"],
+      title: "Task Management App",
+      category: "mobile",
+      image: "https://plus.unsplash.com/premium_vector-1682303104623-bcabb4db6f04?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVwb3J0fGVufDB8fDB8fHww&ixlib=rb-4.0.3&q=60&w=3000",
+      description: "A cross-platform mobile application for task management with real-time updates and team collaboration features.",
+      technologies: ["Android Studio", "Java", "Firebase", "XML", "Material Design Components"],
       githubUrl: "#",
       liveUrl: "#"
     },
     {
       id: 4,
-      title: "AI Content Generator",
+      title: "Morden Human care services",
       category: "web",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      description: "A web application that leverages AI to generate content for various platforms, with customization options and export features.",
-      technologies: ["Python", "Django", "OpenAI API", "React", "PostgreSQL"],
+      image: "https://thumbs.dreamstime.com/b/healthcare-service-online-medical-consultation-concept-fem-female-doctor-computer-screen-vector-illustration-90728194.jpg",
+      description: "Uses machine learning to assist with health prediction, early diagnosis, personalized care, and wellness monitoring for individuals—especially in remote or under-served areas",
+      technologies: ["Angular", "Flask", "Firebase", "TensorFlow", "Matplotlib","Transformers"],
       githubUrl: "#",
       liveUrl: "#"
     },
     {
       id: 5,
-      title: "Music Streaming Service",
-      category: "mobile",
-      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      description: "A music streaming application with personalized recommendations, offline playback, and social sharing features.",
-      technologies: ["Flutter", "Dart", "Firebase", "RESTful APIs", "Spotify API"],
+      title: "School management system",
+      category: "web",
+      image: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/59590f161506911.63c69267a1f81.jpg",
+      description: "Manage and automate daily operations of a school such as managing students, teachers, classes, subjects, attendance, and results using a centralized PHP-based web system",
+      technologies: ["PHP ", "HTML", "CSS", "JavaScript", "Bootstrap", "MySQL", "WAMP "],
       githubUrl: "#",
       liveUrl: "#"
     },
+    // {
+    //   id: 6,
+    //   title: "Carrer Guidence Management System",
+    //   category: "mobile",
+    //   image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    //   description: "Developed using Android Studio. This project helps students or users to get appropriate career suggestions based on their interests, qualifications, and skills.",
+    //   technologies: ["Android Studio", "Firebase", "XML ", "Google Material Design"],
+    //   githubUrl: "#",
+    //   liveUrl: "#"
+    // },
     {
       id: 6,
-      title: "Real Estate Marketplace",
-      category: "web",
-      image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1496&q=80",
-      description: "A real estate marketplace with property listings, advanced search filters, virtual tours, and agent communications.",
-      technologies: ["Vue.js", "Node.js", "Express", "MongoDB", "Google Maps API"],
+      title: "Fasted Food Delivery Service",
+      category: "prototype",
+      image: "https://plus.unsplash.com/premium_vector-1683141179079-189216713537?fm=jpg&ixlib=rb-4.1.0&q=60&w=3000",
+      description: "Designed a high-fidelity prototype for a fast food delivery mobile application using Figma. The goal was to create an intuitive, fast, and visually engaging user experience for customers to browse menus, customize orders, and track deliveries.",
+      technologies: ["Figma","(for wireframes, UI design, and prototyping)"],
       githubUrl: "#",
-      liveUrl: "#"
+      liveUrl: "https://www.figma.com/proto/yVnZZRYxFHFtJdNOWHQlNa/Shreya-Practice?node-id=2-877&p=f&t=pd20EGGqqeYz4Vi5-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
     },
+
   ];
   
   const filteredProjects = activeFilter === 'all' 
@@ -122,7 +134,7 @@ const Portfolio = () => {
         
         {/* Filter buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {['all', 'web', 'mobile'].map((filter) => (
+          {['all', 'web', 'mobile', 'prototype'].map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}

@@ -27,7 +27,7 @@ const Footer = () => {
           {/* Footer logo/name */}
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-highlight tracking-tight">
-              Tejas Bhandari
+              Shreya Parekh
             </h2>
           </div>
           
@@ -56,7 +56,7 @@ const Footer = () => {
               <Github className="h-5 w-5" />
             </a>
             <a 
-              href="#" 
+              href="https://www.linkedin.com/in/shreya-parekh-071688193/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-border flex items-center justify-center glow-hover"
@@ -74,7 +74,7 @@ const Footer = () => {
               <Twitter className="h-5 w-5" />
             </a>
             <a 
-              href="mailto:hello@example.com" 
+              href="mailto:shreyaparekh685@gmail.com" 
               className="w-10 h-10 rounded-full border border-border flex items-center justify-center glow-hover"
               aria-label="Email"
             >

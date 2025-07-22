@@ -44,6 +44,14 @@ const Header = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
+  
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/src/Shreya Parekh Resume (2025).pdf'; // path to your PDF file (public/sample.pdf)
+    link.download = 'Shreya Parekh Resume.pdf'; // suggested file name
+    link.click();
+  };
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-deep-blue/90 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,7 +77,7 @@ const Header = () => {
           </nav>
 
           {/* Download CV Button */}
-          <Button variant="outline" size="sm" className="hidden md:flex items-center gap-2 btn-outline">
+          <Button variant="outline" size="sm" className="hidden md:flex items-center gap-2 btn-outline" onClick={handleDownload}>
             <Download size={16} />
             <span>Download CV</span>
           </Button>
@@ -99,7 +107,7 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="outline" size="sm" className="flex items-center justify-center gap-2 mt-4 btn-outline">
+            <Button variant="outline" size="sm" className="flex items-center justify-center gap-2 mt-4 btn-outline" onClick={handleDownload}>
               <Download size={16} />
               <span>Download CV</span>
             </Button>

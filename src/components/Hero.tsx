@@ -31,18 +31,20 @@ const Hero = () => {
           <div className="order-2 lg:order-1 animate-slide-right">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Hello, I'm <br />
-              <span className="gradient-text">Tejas Bhandari</span>
+              <span className="gradient-text">Shreya Parekh</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-              And I'm a <span className="text-highlight">Software Engineer</span>
+              And I'm a <span className="text-highlight">Front End Developer & UI/UX designer</span>
             </h2>
             
             <p className="text-muted-foreground text-lg mb-8 max-w-lg">
-            Crafting scalable and efficient backend solutions with clean, high-performance code. Specialized in Python development, building robust applications and systems that drive innovation.
+            with a strong focus on usability, performance, and visual clarity.
+I create intuitive digital interfaces by blending user experience best practices with efficient front-end development.
+My goal is to "deliver scalable and impactful solutions across platforms".
             </p>
             
             <div className="flex flex-wrap gap-4 mb-10">
-              <a href="#" aria-label="Facebook" className="transform hover:scale-110 transition-transform duration-300">
+              {/* <a href="#" aria-label="Facebook" className="transform hover:scale-110 transition-transform duration-300">
                 <Facebook className="w-6 h-6 text-foreground hover:text-highlight transition-colors" />
               </a>
               <a href="#" aria-label="Twitter" className="transform hover:scale-110 transition-transform duration-300">
@@ -50,16 +52,16 @@ const Hero = () => {
               </a>
               <a href="#" aria-label="Instagram" className="transform hover:scale-110 transition-transform duration-300">
                 <Instagram className="w-6 h-6 text-foreground hover:text-highlight transition-colors" />
-              </a>
-              <a href="#" aria-label="LinkedIn" className="transform hover:scale-110 transition-transform duration-300">
+              </a> */}
+              <a href="https://www.linkedin.com/in/shreya-parekh-071688193/" aria-label="LinkedIn" className="transform hover:scale-110 transition-transform duration-300">
                 <Linkedin className="w-6 h-6 text-foreground hover:text-highlight transition-colors" />
               </a>
             </div>
             
-            <div className="flex flex-wrap gap-4">
+            {/* <div className="flex flex-wrap gap-4"> */}
               {/* <Button className="btn-primary">Hire Me</Button> */}
-              <Button className="btn-outline">Contact Me</Button>
-            </div>
+              {/* <Button className="btn-outline">Contact Me</Button> */}
+            {/* </div> */}
           </div>
           
           {/* Hero image - enhanced with hexagonal shape and improved effects */}
@@ -78,7 +80,7 @@ const Hero = () => {
               <div className="absolute inset-8 overflow-hidden rounded-3xl border-2 border-highlight shadow-neon">
                 <AspectRatio ratio={1/1} className="w-full h-full">
                   <img 
-                    src="/IMG-20241127-WA0041.jpg" 
+                    src="/IMG_20250722_031539.jpg" 
                     alt="Profile" 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />

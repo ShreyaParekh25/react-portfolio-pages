@@ -68,7 +68,7 @@ const About = () => {
                   <Calendar className="h-10 w-10 text-highlight" />
                 </div>
                 <h3 className="font-bold text-lg">Experience</h3>
-                <p className="text-muted-foreground">4+ Years</p>
+                <p className="text-muted-foreground">2+ Years</p>
               </div>
               
               <div className="glass-card p-6 text-center transform hover:scale-105 transition-transform">
@@ -76,7 +76,7 @@ const About = () => {
                   <Award className="h-10 w-10 text-highlight" />
                 </div>
                 <h3 className="font-bold text-lg">Completed</h3>
-                <p className="text-muted-foreground">10+ Projects</p>
+                <p className="text-muted-foreground">5+ Projects</p>
               </div>
               
               <div className="glass-card p-6 text-center transform hover:scale-105 transition-transform">
@@ -84,22 +84,19 @@ const About = () => {
                   <BookOpen className="h-10 w-10 text-highlight" />
                 </div>
                 <h3 className="font-bold text-lg">Education</h3>
-                <p className="text-muted-foreground">Master of Computer Application</p>
+                <p className="text-muted-foreground">Bachelor of computer engineering</p>
               </div>
             </div>
             
             <div className="mb-8">
               <p className="text-lg leading-relaxed text-muted-foreground mb-4">
              
-                  A highly skilled and results-driven Python Backend Developer with expertise in building 
-                  scalable, high-performance applications. Passionate about crafting clean, efficient, 
-                  and secure code, I specialize in Django, RESTful APIs, MySQL, PostgreSQL, 
-                  and machine learning.
+                  Experienced Software Developer with 2+ years in full-cycle development of enterprise web and client- server applications. Proficient in front-end technologies including HTML, CSS, JavaScript (ES6+), TypeScript, Angular, React, Bootstrap, and Sass, with backend experience in Node.js, Java, and CMS platforms like Shopify and WordPress. 
 
 
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground mb-4">
-              With experience leading end-to-end backend development, I have successfully optimized system performance, reduced response times, and enhanced security. My background includes developing transportation services applications, hospital management systems, and automated microservices for scheduling and notifications.
+              Solid foundation in structured programming (C, C++, C#, Python) and strong skills in responsive UI/UX, REST API integration, and scalable code architecture. Adept at working in Agile teams, managing production environments, and communicating technical solutions effectively.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
 Driven by continuous learning, I stay updated with emerging technologies and apply strong analytical and problem-solving skills to tackle complex challenges. Committed to innovation, I thrive in fast-paced, deadline-driven environments, delivering impactful software solutions.

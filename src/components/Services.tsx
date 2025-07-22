@@ -8,7 +8,8 @@ import {
   Server,
   Smartphone,
   Monitor,
-  X
+  X,
+  CodeXml
 } from 'lucide-react';
 
 type Service = {
@@ -22,6 +23,30 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   
   const services: Service[] = [
+     {
+      title: "Front end Development",
+      description: "creating the user-facing parts of websites and web applications, ensuring they are visually appealing, user-friendly, and functional.", 
+      icon: <CodeXml  className="h-10 w-10" />,
+      features: [
+        "Responsive and Cross-platform Web development",
+        "Single-Page Application (SPA) Development ",
+        "App performance optimization",
+        "SEO-friendly development",
+        "Progressive Web App (PWA) Development",
+      ]
+    },
+     {
+      title: "UI/UX Design",
+      description: "Creating intuitive and attractive user interfaces.",
+      icon: <Monitor className="h-10 w-10" />,
+      features: [
+        "User interface design",
+        "User experience optimization",
+        "Wireframing & prototyping",
+        "Design system creation",
+        "Accessibility compliance",
+      ]
+    },
     {
       title: "Web Development",
       description: "Creating responsive and engaging web applications.",
@@ -40,24 +65,11 @@ const Services = () => {
       icon: <Server className="h-10 w-10" />,
       features: [
         "RESTful API development",
-        "GraphQL API implementation",
         "Database design & optimization",
         "Authentication & authorization",
-        "Microservices architecture",
       ]
     },
-    {
-      title: "Mobile App Development",
-      description: "Developing cross-platform and native mobile applications.",
-      icon: <Smartphone className="h-10 w-10" />,
-      features: [
-        "Cross-platform app development",
-        "Native iOS & Android apps",
-        "App performance optimization",
-        "Mobile UI/UX design",
-        "App store deployment",
-      ]
-    },
+   
     {
       title: "Database Design",
       description: "Designing efficient and scalable database solutions.",
@@ -70,18 +82,7 @@ const Services = () => {
         "Data security & integrity",
       ]
     },
-    {
-      title: "UI/UX Design",
-      description: "Creating intuitive and attractive user interfaces.",
-      icon: <Monitor className="h-10 w-10" />,
-      features: [
-        "User interface design",
-        "User experience optimization",
-        "Wireframing & prototyping",
-        "Design system creation",
-        "Accessibility compliance",
-      ]
-    },
+   
     {
       title: "Code Review & Refactoring",
       description: "Improving existing codebases for better performance and maintainability.",

@@ -23,20 +23,20 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      value: "bhandari.tejas001@gmail.com",
-      link: "mailto:bhandari.tejas001@gmail.com"
+      value: "shreyaparekh685@gmail.com",
+      link: "mailto:shreyaparekh685@gmail.com"
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
-      value: "+91 9601092501",
-      link: "tel:+91 9601092501"
+      value: "+1 (516)779-9322",
+      link: "tel:+1 516-779-9322"
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Location",
-      value: "Valsad, Gujarat",
-      link: "https://maps.google.com/?q=San+Francisco,+CA"
+      value: "West New York, New Jersey",
+      link: "https://www.google.com/maps/dir//West+New+York,+NJ"
     }
   ];
 
@@ -103,7 +103,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Tejas Bhandari"
+                  placeholder="Shreya Parekh"
                   required
                   className="bg-deep-blue border-border/50 focus:border-highlight focus:ring-1 focus:ring-highlight"
                 />

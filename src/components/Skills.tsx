@@ -18,35 +18,34 @@ const Skills = () => {
   const [activeCategory, setActiveCategory] = useState(0);
   
   const categories: SkillCategory[] = [
+       {
+      name: "Frontend",
+      icon: <Layout className="h-6 w-6" />,
+      skills: [
+        { name: "Angular", proficiency: 90 },
+        { name: "HTML/CSS", proficiency: 95 },
+        { name: "JavaScript", proficiency: 90 },
+        { name: "React", proficiency: 75 },
+      ]
+    },
     {
       name: "Backend",
       icon: <Server className="h-6 w-6" />,
       skills: [
-   
-        { name: "Python", proficiency: 90 },
-        { name: "Django", proficiency: 90 },
-        { name: "FastAPI", proficiency: 70 },
-        { name: "FlaskAPI", proficiency: 85 },
+        { name: "ASP.NET", proficiency: 60 },
+        { name: "Java", proficiency: 55 },
+        { name: "PHP", proficiency: 30 },
+        { name: "Python", proficiency: 30 },
+        
       ]
     },
-    {
-      name: "Frontend",
-      icon: <Layout className="h-6 w-6" />,
-      skills: [
-        { name: "HTML/CSS", proficiency: 95 },
-        { name: "JavaScript", proficiency: 90 },
-        { name: "React", proficiency: 50 },
-        { name: "svelte", proficiency: 60 },
-      ]
-    },
-    
     {
       name: "Database",
       icon: <Database className="h-6 w-6" />,
       skills: [
-        { name: "PostgreSQL", proficiency: 90 },
+        { name: "PostgreSQL", proficiency: 80 },
         { name: "MySQL", proficiency: 80 },
-        { name: "Redis", proficiency: 60 },
+        // { name: "Redis", proficiency: 60 },
         { name: "MongoDB", proficiency: 20 },
 
       ]
@@ -56,8 +55,8 @@ const Skills = () => {
       name: "Dev Tools",
       icon: <Code className="h-6 w-6" />,
       skills: [
-        { name: "Git", proficiency: 95 },
-        { name: "Gitlab", proficiency: 85 },
+        { name: "Git", proficiency: 85 },
+        { name: "Postman", proficiency: 85 },
         { name: "AWS", proficiency: 50 },
        
       ]

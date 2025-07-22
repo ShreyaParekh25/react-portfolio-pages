@@ -72,10 +72,10 @@ const Metrics = () => {
       <div className="absolute inset-0 bg-blue-gradient opacity-10"></div>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <Metric value={4} label="Years of experience" />
-          <Metric value={10} label="Projects completed" />
+          <Metric value={2} label="Years of experience" />
+          <Metric value={5} label="Projects completed" />
           <Metric value={3} label="Technologies mastered" />
-          <Metric value={8} label="Satisfied Clients" />
+          <Metric value={5} label="Satisfied Clients" />
         </div>
       </div>
     </section>
