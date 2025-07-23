@@ -85,7 +85,7 @@ const Portfolio = () => {
       title: "Fasted Food Delivery Service",
       category: "prototype",
       image: "https://plus.unsplash.com/premium_vector-1683141179079-189216713537?fm=jpg&ixlib=rb-4.1.0&q=60&w=3000",
-      description: "Designed a high-fidelity prototype for a fast food delivery mobile application using Figma. The goal was to create an intuitive, fast, and visually engaging user experience for customers to browse menus, customize orders, and track deliveries.",
+      description: "Designed a high-fidelity prototype using Figma. create an intuitive, fast, and visually engaging user experience for customers to browse menus, customize orders, and track deliveries.",
       technologies: ["Figma","(for wireframes, UI design, and prototyping)"],
       githubUrl: "#",
       liveUrl: "https://www.figma.com/proto/yVnZZRYxFHFtJdNOWHQlNa/Shreya-Practice?node-id=2-877&p=f&t=pd20EGGqqeYz4Vi5-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"

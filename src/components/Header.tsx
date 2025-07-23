@@ -47,7 +47,7 @@ const Header = () => {
   
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/src/Shreya Parekh Resume (2025).pdf'; // path to your PDF file (public/sample.pdf)
+    link.href = '/Shreya Parekh Resume (2025).pdf'; // path to your PDF file (public/sample.pdf)
     link.download = 'Shreya Parekh Resume.pdf'; // suggested file name
     link.click();
   };
