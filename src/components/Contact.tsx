@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
+
 import { 
   Mail, Phone, MapPin, 
   Send, Loader2
@@ -50,15 +53,24 @@ const Contact = () => {
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+emailjs
+      .send(
+        "service_rvdyhzq",
+        "template_9oo0rn6",
+        formData,
+        "uqA1_qyeF4jlGNJ5Q"
+      )
+      .then(
+        () => {
+          alert("✅ Message sent successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "" });
+          setIsSubmitting(false);
+        },
+        () => {
+          alert("❌ Failed to send message. Try again.");
+          setIsSubmitting(false);
+        }
+      );
   };
 
   return (
@@ -66,19 +78,23 @@ const Contact = () => {
       <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-gradient-radial from-light-blue/10 to-transparent opacity-30" />
       
       <div className="section-container">
-        <div className="text-center mb-16">
+        <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        className="text-center mb-16">
           <h2 className="section-title">Contact Me</h2>
-          <p className="section-subtitle">Get in touch</p>
-        </div>
+          <p className="text-gray-400 mt-3">Let's build something amazing together 🚀</p>
+        </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact cards */}
           {contactInfo.map((item, index) => (
-            <a
+            <motion.a
               key={index}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
               className="glass-card p-6 text-center hover:shadow-neon transition-all duration-300 group"
             >
               <div className="mb-4 w-16 h-16 rounded-full bg-accent/30 mx-auto flex items-center justify-center text-highlight group-hover:bg-highlight group-hover:text-deep-blue transition-colors">
@@ -86,13 +102,16 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
               <p className="text-muted-foreground">{item.value}</p>
-            </a>
+            </motion.a>
           ))}
         </div>
         
         {/* Contact form */}
         <div className="glass-card p-8 mt-12 rounded-xl">
-          <form onSubmit={handleSubmit}>
+          <motion.form 
+             initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -173,7 +192,7 @@ const Contact = () => {
                 </>
               )}
             </Button>
-          </form>
+          </motion.form>
         </div>
       </div>
     </section>

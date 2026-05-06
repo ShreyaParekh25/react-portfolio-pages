@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Download, Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,12 +19,12 @@ const Header = () => {
 
     // Update active section based on scroll position
     const sections = document.querySelectorAll('section[id]');
-    
+
     sections.forEach(section => {
       const sectionTop = (section as HTMLElement).offsetTop - 100;
       const sectionHeight = (section as HTMLElement).offsetHeight;
       const sectionId = section.getAttribute('id') || '';
-      
+
       if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
         setActiveSection(sectionId);
       }
@@ -44,7 +45,7 @@ const Header = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
-  
+
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/Shreya_Parekh.pdf'; // path to your PDF file (public/sample.pdf)
@@ -53,26 +54,32 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-deep-blue/90 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
+    <motion.header initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-deep-blue/90 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#home" className="text-2xl font-bold text-highlight tracking-tight">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              href="#home" className="text-2xl font-bold text-highlight tracking-tight">
               Portfolio
-            </a>
+            </motion.a>
           </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (
-              <a
+              <motion.a
                 key={link.name}
                 href={link.href}
+                whileHover={{ scale: 1.1 }}
                 className={`nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
               >
                 {link.name}
-              </a>
+              </motion.a>
             ))}
           </nav>
 
@@ -83,6 +90,7 @@ const Header = () => {
           </Button>
 
           {/* Mobile menu button */}
+
           <button className="md:hidden" onClick={toggleMenu}>
             {isMenuOpen ? (
               <X className="h-6 w-6 text-highlight" />
@@ -92,29 +100,34 @@ const Header = () => {
           </button>
         </div>
       </div>
-
-      {/* Mobile Nav */}
-      <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0 invisible'} overflow-hidden`}>
-        <div className="bg-medium-blue/80 backdrop-blur-md px-4 py-4">
-          <nav className="flex flex-col space-y-3">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`nav-link text-center py-3 ${activeSection === link.href.substring(1) ? 'active' : ''}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-            <Button variant="outline" size="sm" className="flex items-center justify-center gap-2 mt-4 btn-outline" onClick={handleDownload}>
-              <Download size={16} />
-              <span>Download CV</span>
-            </Button>
-          </nav>
+      <AnimatePresence>
+        {/* Mobile Nav */}
+        <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0 invisible'} overflow-hidden`}>
+          <div className="bg-medium-blue/80 backdrop-blur-md px-4 py-4">
+            <nav className="flex flex-col space-y-3">
+              {navLinks.map((link, i) => (
+                <motion.a
+                  key={link.name}
+                  href={link.href}
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`nav-link text-center py-3 ${activeSection === link.href.substring(1) ? 'active' : ''}`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </motion.a>
+              ))}
+              <Button variant="outline" size="sm" className="flex items-center justify-center gap-2 mt-4 btn-outline" onClick={handleDownload}>
+                <Download size={16} />
+                <span>Download CV</span>
+              </Button>
+            </nav>
+          </div>
         </div>
-      </div>
-    </header>
+      </AnimatePresence>
+    </motion.header>
+
   );
 };
 
